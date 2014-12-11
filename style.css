@@ -1,0 +1,145 @@
+/**
+ * Theme Name:  Angkloong Jozh
+ * Theme URI:   http://github.com/erricgunawan/angkloong-jozh
+ * Description: A child theme for I Am Jozh.
+ * Version:     1.0
+ * Author:      Papa Eric
+ * Author URI:  http://erricgunawan.com
+ * Tags:        photo, boy, purple
+ *
+ * License:     GNU General Public License v2.0
+ * License URI: http://www.gnu.org/licenses/gpl-2.0.html
+ *
+ * Template:    angkloong-lite
+ */
+
+/* Place your custom style here. */
+
+/* remove Login link on top header */
+.top-header {
+	display: none;
+}
+
+/* Logo */
+img.logo {
+	max-width: 97%;
+}
+
+/* Post Meta */
+.post-meta .cats .category a,
+.post-meta .cats .post_tag a,
+.post-meta .cats .author a {
+	font-family: 'Noto Sans', sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	color: #ff6600;
+}
+
+
+/************************* 
+ * Purple Section: #54397e
+ * Replacing #2e3e40 
+ *************************/
+
+.sub-menu li a {
+	color: #54397e !important;
+}
+
+body {
+	background: #54397e;
+}
+
+/* Post Format Quote background, just in case will be needed */
+.format-quote .entry-content {
+	background: #54397e;
+}
+
+/* Navigation */
+.fixed-nav { 
+	background: #54397e; border: 1px solid #fff; 
+}
+
+/* End of Purple Section */
+
+
+/************************* 
+ * Orange Section: #ff6600
+ * Replacing #9b6b72 
+ *************************/
+
+#access ul li a:hover,
+.primary-navigation ul li a:hover {
+	color: #ff6600;
+}
+
+.sub-menu li a:hover {
+	color: #ff6600 !important;
+}
+.sub-menu li:hover {
+	color: #ff6600 !important;
+}
+
+.more:hover {
+	color: #ff6600;
+}
+
+ins {
+	color: #ff6600;
+}
+
+.pagination.for-product .prev,
+.pagination.for-product .next {
+	background: #ff6600;
+}
+
+.sticky {
+	border-color: #ff6600;
+	/* border-bottom: 5px solid #9b6b72;
+	border-top: 5px solid #9b6b72; */
+}
+
+a {
+	color: #ff6600;
+}
+a:hover,
+a:focus {
+	color: #54397e;
+}
+.brand-name:hover {
+	color: #ff6600;
+}
+
+.widget .widget-title::first-letter {
+	color: #ff6600;
+}
+
+.tagcloud a {
+	background: #ff6600;
+}
+
+.single-blog td a, .single-blog th a {
+	color: #ff6600;
+}
+
+/* End of Brown Section */
+
+
+/************************* 
+ * Orange Section: #ff6600
+ * Replacing #2e3e40 
+ *************************/
+
+.search-top .search-trigger:hover {
+	border-color: #ff6600;
+}
+.search-top .search-trigger:hover i {
+	color: #ff6600;
+}
+.search-top .search-bar form input[type=submit] {
+	color: #ff6600;
+}
+.search-top .search-bar form i {
+	color: #ff6600;
+}
+
+/* End of Brown Section */
