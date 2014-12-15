@@ -50,8 +50,18 @@ body {
 }
 
 /* Post Format Quote background, just in case will be needed */
-.format-quote .entry-content {
+.format-quote .entry-content,
+.format-status .entry-content {
 	background: #54397e;
+}
+/* Post Format Status, make it same like Quote */
+.format-status .entry-content {
+	overflow: hidden;
+	padding: 30px;
+	color: #fff;
+}
+.format-status .post_content iframe {
+	margin: 1em auto !important;
 }
 
 /* Navigation */
