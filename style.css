@@ -35,6 +35,20 @@ img.logo {
 	color: #ff6600;
 }
 
+/* to make sure caption follow image width (in portrait)
+   http://stackoverflow.com/questions/4979487/image-caption-width-to-same-as-image */
+.wp-caption {
+	display: table;
+	margin: 1em auto;
+}
+.wp-caption figcaption {
+	position: relative;
+	bottom: 60px;
+	background: rgba(84, 57, 126, 0.7);
+	display: table-caption;
+	caption-side: bottom;
+}
+
 
 /************************* 
  * Purple Section: #54397e
@@ -153,3 +167,12 @@ a:focus {
 }
 
 /* End of Brown Section */
+
+
+/* Portrait Image for Desktop */
+@media (min-width: 1024px) {
+	.wp-caption img, img.aligncenter {
+		max-height: 600px;
+		width: auto;
+	}
+}

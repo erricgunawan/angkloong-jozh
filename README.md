@@ -6,5 +6,11 @@ A WordPress Child Theme of [Angkloong Lite](http://tokokoo.com/themes/angkloong-
 Changelog
 ---------
 
+= x.x =
+* Add Post Format Status
+* Fix Portrait and bigger images to fit in desktop screen
+* Fix image caption
+* Add lightbox plugin (no modification on theme)
+
 = 1.0 =
 * Released!
