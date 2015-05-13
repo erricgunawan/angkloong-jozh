@@ -11,6 +11,7 @@ Changelog
 * Fix Portrait and bigger images to fit in desktop screen
 * Fix image caption
 * Add lightbox plugin (no modification on theme)
+* Fix non-aligned image in desktop
 
 = 1.0 =
 * Released!

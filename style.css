@@ -171,7 +171,7 @@ a:focus {
 
 /* Portrait Image for Desktop */
 @media (min-width: 1024px) {
-	.wp-caption img, img.aligncenter {
+	.wp-caption img, img.aligncenter, img.alignnone {
 		max-height: 600px;
 		width: auto;
 	}
