@@ -34,7 +34,7 @@
 
 // }
 
-
+/*************************************************************************************************/
 
 /**
 * Return an HTML img tag for the first image in a post content. Used to draw
@@ -78,7 +78,7 @@ function jozh_get_first_image() {
 
 }
 
-
+/*************************************************************************************************/
 
 /**
  * Post By Line
@@ -109,3 +109,83 @@ function jozh_post_attribute() {
 	</div><!-- .post-meta -->
 <?php
 }
+
+/*************************************************************************************************/
+
+/**
+ * Save to Drive
+ * extracted from https://wordpress.org/plugins/save-to-drive/
+ */
+
+/**
+* Save to Drive Shortcode
+*
+* Shortcode for generating button
+*
+* @since	1.0
+*
+* @uses     generate_save_to_drive_button	Generate button code
+*
+* @param	string		$paras				Shortcode parameters
+* @param	string		$content			Passed content
+* @return	string							Code to generate button
+*/
+add_shortcode( 'savetodrive', 'jozh_save_to_drive_sc' );
+function jozh_save_to_drive_sc( $paras = '', $content = '' ) {
+
+	// Extract shortcode parameters
+
+	extract( shortcode_atts( array( 'filename' => '', 'url' => '' ), $paras ) );
+
+	// If URL is not specified as a parameter attempt to use the content instead
+
+	if ( $url == '' ) {
+		if ( $content == '' ) {
+			return '<p style="color: #f00; font-weight: bold;">Save to Drive: ' . __( 'No filename was supplied', 'tokokoo' ) . "</p>\n";
+		} else {
+			$url = $content;
+		}
+	}
+
+	return jozh_generate_save_to_drive_button( $url, $filename );
+}
+
+/**
+* Generate Save to Drive button
+*
+* Generate the code to produce the Save to Drive button
+*
+* @since	1.0
+*
+* @param	string		$url				URL to download file
+* @param	string		$filename			Name to save file as (optional)
+* @return	string							Code to generate button
+*/
+function jozh_generate_save_to_drive_button( $url = '', $filename = '' ) {
+
+	// If no filename attempt to extract it from the URL
+
+	if ( $filename == '' ) {
+		$slash_pos = strrpos( $url, '/' );
+		if ( !$slash_pos ) {
+			$filename = $url;
+		} else {
+			$filename = substr( $url, $slash_pos + 1 );
+		}
+	}
+
+	// Once a URL is available, add the appropriate Add to Drive button
+
+	$sitename = get_bloginfo( 'name' );
+
+	$content = "\n" . '<!-- Jozh Save to Drive -->' . "\n";
+	$content .= '<script src="https://apis.google.com/js/plusone.js"></script>' . "\n";
+	$content .= '<div class="g-savetodrive" data-filename="' . $filename . '" data-sitename="' . $sitename . '" data-src="' . $url . '"></div>' . "\n";
+	$content .= '<!-- ' . __( 'End of Save to Drive code', 'tokokoo' ) . ' -->' . "\n";
+
+	// Return the content
+
+	return $content;
+}
+
+/*************************************************************************************************/

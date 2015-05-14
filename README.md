@@ -12,6 +12,7 @@ Changelog
 * Fix image caption
 * Add lightbox plugin (no modification on theme)
 * Fix non-aligned image in desktop
+* Add Google Drive shortcode
 
 = 1.0 =
 * Released!
